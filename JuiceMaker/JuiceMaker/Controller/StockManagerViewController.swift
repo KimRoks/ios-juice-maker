@@ -11,6 +11,8 @@ final class StockManagerViewController: UIViewController {
     
     // MARK: - Properties
     
+    var fruitStore: FruitStore!
+    
     @IBOutlet private var strawberryQuantityLabel: StrawberryQuantityLabel!
     @IBOutlet private var bananaQuantityLabel: BananaQuantityLabel!
     @IBOutlet private var pineappleQuantityLabel: PineappleQuantityLabel!
@@ -21,6 +23,22 @@ final class StockManagerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        displayQuantityLabel()
+    }
+    
+    // MARK: - Methods
+    
+    private func displayQuantityLabel() {
+        let fruitQuantityLabels: [FruitQuantityLabel] = [strawberryQuantityLabel,
+                                                         bananaQuantityLabel,
+                                                         pineappleQuantityLabel,
+                                                         kiwiQuantityLabel,
+                                                         mangoQuantityLabel]
+        
+        for label in fruitQuantityLabels {
+            guard let furit = label.fruit() else { continue }
+            let fruitQuantity = fruitStore.quantity(of: furit)
+            label.text = String(fruitQuantity)
+        }
     }
 }

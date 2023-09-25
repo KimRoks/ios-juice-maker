@@ -81,7 +81,12 @@ final class JuiceMakerViewController: UIViewController {
     }
     
     private func presentStockManagerViewController() {
-        guard let stockManagerViewController = self.storyboard?.instantiateViewController(identifier: "StockManagement") else { return }
+        guard let stockManagerViewController = self.storyboard?.instantiateViewController(identifier: "StockManagerViewController") as? StockManagerViewController else { return }
+        stockManagerViewController.fruitStore = juiceMaker.fruitStore
         self.present(stockManagerViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func pressEditButton(_ sender: Any) {
+        presentStockManagerViewController()
     }
 }
