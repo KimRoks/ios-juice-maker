@@ -254,10 +254,10 @@
             </objects>
             <point key="canvasLocation" x="1514.2180094786729" y="92.307692307692307"/>
         </scene>
-        <!--Stock Management View Controller-->
+        <!--Stock Manager View Controller-->
         <scene sceneID="fkG-vv-hpE">
             <objects>
-                <viewController storyboardIdentifier="StockManagement" id="Yu1-lM-nqp" customClass="StockManagementViewController" customModule="JuiceMaker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StockManagerViewController" id="Yu1-lM-nqp" customClass="StockManagerViewController" customModule="JuiceMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tKV-4l-Vtc">
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -394,6 +394,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g4W-fY-l7r"/>
+                    <connections>
+                        <outlet property="bananaQuantityLabel" destination="gKu-86-RhI" id="iaF-AZ-BpA"/>
+                        <outlet property="kiwiQuantityLabel" destination="ZDv-1m-HBY" id="wA8-qQ-Ye3"/>
+                        <outlet property="mangoQuantityLabel" destination="YJI-ER-LJR" id="udD-C7-9qt"/>
+                        <outlet property="pineappleQuantityLabel" destination="fzW-eJ-PHf" id="8LD-8W-TxX"/>
+                        <outlet property="strawberryQuantityLabel" destination="0yV-kn-zaT" id="Mfe-Km-RFz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ieh-6D-g1l" sceneMemberID="firstResponder"/>
             </objects>
